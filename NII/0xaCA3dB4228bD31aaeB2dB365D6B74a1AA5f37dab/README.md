@@ -1,5 +1,5 @@
 # Settlement of NII
-This document presents recommended in order to settle the Nahmii 1 balance of NII of account `0xaCA3dB4228bD31aaeB2dB365D6B74a1AA5f37dab`.
+This document presents the recommended steps in order to settle the Nahmii 1 balance of NII of account `0xaCA3dB4228bD31aaeB2dB365D6B74a1AA5f37dab`.
 
 The ordered steps of contract function invocations are included below and in the corresponding [steps.json](./steps.json). Please read [the general recipe for settling Nahmii 1 balance](../../README.md) before starting on the first step of settlement.
 ## Ordered steps
