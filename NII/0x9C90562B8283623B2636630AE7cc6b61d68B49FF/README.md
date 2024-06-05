@@ -1,45 +1,50 @@
 # Settlement of NII
-This document presents the recommended steps in order to settle the Nahmii 1 balance of NII of account `0x9C90562B8283623B2636630AE7cc6b61d68B49FF`.
+This document presents the recommended steps in order to settle the Nahmii 1
+balance of NII of account `0x9C90562B8283623B2636630AE7cc6b61d68B49FF`.
 
-The ordered steps of contract function invocations are included below and in the corresponding [steps.json](./steps.json). Please read [the general recipe for settling Nahmii 1 balance](../../README.md) before starting on the first step of settlement.
+The ordered steps of contract function invocations are included below and in
+the corresponding [steps.json](./steps.json). Please read [the general recipe
+for settling Nahmii 1 balance](../../README.md) before starting on the first
+step of settlement.
+
 ## Ordered steps
 ### Step 1
 #### Contract
-*NullSettlementChallengeByPayment* ([0x34fe0c8100dc8ec65e50ff195faa93297ebf4f19](https://etherscan.io/address/0x34fe0c8100dc8ec65e50ff195faa93297ebf4f19#code))
+*NullSettlementChallengeByPayment* ([0x34fe0c8100dc8ec65e50ff195faa93297ebf4f19](https://etherscan.io/address/0x34fe0c8100dc8ec65e50ff195faa93297ebf4f19))
 #### Method name
 *startChallenge*
 #### Method payload
 ```
 0xc1c681650000000000000000000000000000000000000000000000000002977e1a428aee0000000000000000000000007c8155909cd385f120a56ef90728dd50f9ccbe520000000000000000000000000000000000000000000000000000000000000000
 ```
-#### Encoded method args
-* *amount*: `729517815663342`
-* *currencyCt*: `0x7c8155909cd385f120a56ef90728dd50f9ccbe52`
+#### Encode method args
+* *stageAmount*: `729517815663342`
+* *currencyCt*: `0x7c8155909cd385F120A56eF90728dD50F9CcbE52`
 * *currencyId*: `0`
 ### Step 2
 #### Contract
-*NullSettlement* ([0x4dd0200874480fa4a6e72a6a9a4d020aff338085](https://etherscan.io/address/0x4dd0200874480fa4a6e72a6a9a4d020aff338085#code))
+*NullSettlement* ([0x4dd0200874480fa4a6e72a6a9a4d020aff338085](https://etherscan.io/address/0x4dd0200874480fa4a6e72a6a9a4d020aff338085))
 #### Method name
 *settleNull*
 #### Method payload
 ```
 0x66a83a6f0000000000000000000000007c8155909cd385f120a56ef90728dd50f9ccbe520000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000054552433230000000000000000000000000000000000000000000000000000000
 ```
-#### Encoded method args
-* *currencyCt*: `0x7c8155909cd385f120a56ef90728dd50f9ccbe52`
+#### Encode method args
+* *currencyCt*: `0x7c8155909cd385F120A56eF90728dD50F9CcbE52`
 * *currencyId*: `0`
 * *standard*: `ERC20`
 ### Step 3
 #### Contract
-*ClientFund* ([0xcc8d82f6ba952966e63001c7b320eef2ae729099](https://etherscan.io/address/0xcc8d82f6ba952966e63001c7b320eef2ae729099#code))
+*ClientFund* ([0xcc8d82f6ba952966e63001c7b320eef2ae729099](https://etherscan.io/address/0xcc8d82f6ba952966e63001c7b320eef2ae729099))
 #### Method name
 *withdraw*
 #### Method payload
 ```
 0x0f200f9b0000000000000000000000000000000000000000000000000002977e1a428aee0000000000000000000000007c8155909cd385f120a56ef90728dd50f9ccbe520000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000054552433230000000000000000000000000000000000000000000000000000000
 ```
-#### Encoded method args
+#### Encode method args
 * *value*: `729517815663342`
-* *currencyCt*: `0x7c8155909cd385f120a56ef90728dd50f9ccbe52`
+* *currencyCt*: `0x7c8155909cd385F120A56eF90728dD50F9CcbE52`
 * *currencyId*: `0`
 * *standard*: `ERC20`
